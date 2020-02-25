@@ -1,3 +1,18 @@
+var text = new PointText(80, 80);
+text.content = 'Tap any Letter to Play!!';
+text.style = {
+    fontFamily: 'Courier New',
+    fontWeight: 'bold',
+    fontSize: 15,
+    fillColor: 'cornflowerblue'
+};
+
+var border = new Path({
+	segments: [[20, 50], [20, 100], [370, 100], [370, 50], [20, 50]]
+});
+
+border.strokeColor = 'cornflowerblue';
+
 var circles = [];
 
 function onKeyDown(event) {
