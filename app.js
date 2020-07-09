@@ -1,8 +1,9 @@
+require("dotenv").config();
+
 var express = require("express");
 var app = express();
 const engine = require('hbs');
 const path = require('path');
-
 
 // view engine setup
 app.set('view engine', 'html');
@@ -16,18 +17,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // landing page
-app.get("/", (req, res) => {
-    res.render("index");
-});
+app.get("/", (req, res) => res.render("index"));
 
 //triggered whenever any URL other than the ones above is requested
 //must be at the end
-app.get("*", (req, res) => {
-    res.send("Where are you going?");
-});
+app.get("*", (req, res) => res.send("Where are you going?"));
 
 
 //open app on http://localhost:3000
-app.listen( 3000, () => {
-    console.log("Server is running on port 3000");
-})
+app.listen( process.env.PORT, 3000, () => console.log("Patatap-clone running"));
