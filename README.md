@@ -1,4 +1,4 @@
-# Patatap-Clone
+# Soundtap (Patatap-Clone)
 
 Tap any Letter to Play.
 
